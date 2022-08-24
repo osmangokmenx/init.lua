@@ -5,7 +5,8 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
-vim.opt.background = 'dark'
+vim.opt.background = 'dark' -- required
+vim.opt.termguicolors = true -- required 
 
 
 vim.opt.title = true
@@ -47,4 +48,4 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 
-vim.cmd[[colorscheme spacecamp]]
+vim.cmd[[colorscheme onedark]]

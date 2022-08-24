@@ -9,13 +9,9 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   -- colorschemes
-  use 'chriskempson/base16-vim'
   use 'osmangokmenx/onedark.vim'
-  use 'sickill/vim-monokai'
-  use 'folke/tokyonight.nvim'
-  use 'jaredgorski/spacecamp'
   -- LSP
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  -- use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
 
   use {
@@ -47,5 +43,9 @@ packer.startup(function(use)
   -- use 'MunifTanjim/prettier.nvim' 
   -- use 'glepnir/lspsaga.nvim' -- LSP UIs
   
+  use ({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
 end)

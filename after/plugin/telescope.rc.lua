@@ -16,7 +16,7 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
-    file_ignore_patterns = { "node_modules" }
+    file_ignore_patterns = { "node_modules", ".git"}
   },
   extensions = {
     find_files = {
@@ -55,17 +55,11 @@ vim.keymap.set('n', '<leader>rg', function()
     file_ignore_patterns = { "node_modules", ".lock" }
   })
 end)
-vim.keymap.set('n', '\\\\', function()
-  builtin.buffers()
-end)
 vim.keymap.set('n', ';t', function()
   builtin.help_tags()
 end)
 vim.keymap.set('n', ';;', function()
   builtin.resume()
-end)
-vim.keymap.set('n', ';e', function()
-  builtin.diagnostics()
 end)
 vim.keymap.set("n", "sf", function()
   telescope.extensions.file_browser.file_browser({
