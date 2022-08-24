@@ -18,7 +18,10 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
 
-  use 'neoclide/coc.nvim' -- Syntax
+  use {
+    'neoclide/coc.nvim', 
+    run = 'yarn install --frozen-lockfile'
+  } -- Syntax
   -- CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-prettier
   -- CocUninstall coc-git
   --
@@ -27,7 +30,10 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'nvim-treesitter/nvim-treesitter'
+ use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   use 'kyazdani42/nvim-web-devicons' -- File icons
   -- Tree
   use 'kyazdani42/nvim-tree.lua'
@@ -39,6 +45,7 @@ packer.startup(function(use)
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'sheerun/vim-polyglot'
   -- use 'MunifTanjim/prettier.nvim' 
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  -- use 'glepnir/lspsaga.nvim' -- LSP UIs
+  
 
 end)

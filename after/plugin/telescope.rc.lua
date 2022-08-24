@@ -50,7 +50,7 @@ vim.keymap.set('n', '<leader>f',
       hidden = true
     })
   end)
-vim.keymap.set('n', '<leader>r', function()
+vim.keymap.set('n', '<leader>rg', function()
   builtin.live_grep({
     file_ignore_patterns = { "node_modules", ".lock" }
   })
