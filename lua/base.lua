@@ -33,6 +33,7 @@ vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
+vim.cmd[[set fillchars+=vert:\|]]
 
 vim.cmd("set signcolumn=yes");
 vim.cmd("let g:autoclose_on = 0");

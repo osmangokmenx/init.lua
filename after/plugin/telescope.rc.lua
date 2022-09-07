@@ -46,6 +46,7 @@ telescope.load_extension("file_browser")
 vim.keymap.set('n', '<leader>f',
   function()
     builtin.find_files({
+      respect_gitignore = false,
       no_ignore = false,
       hidden = true
     })
@@ -74,19 +75,19 @@ vim.keymap.set("n", "sf", function()
   })
 end)
 
-vim.keymap.set("n", "sf", function()
-  telescope.extensions.file_browser.file_browser({
-    path = "%:p:h",
-    cwd = telescope_buffer_dir(),
-    respect_gitignore = false,
-    hidden = true,
-    grouped = true,
-    previewer = false,
-    initial_mode = "insert",
-    layout_config = { height = 40 }
-  })
-end)
-
+-- vim.keymap.set("n", "sf", function()
+--   telescope.extensions.file_browser.file_browser({
+--     path = "%:p:h",
+--     cwd = telescope_buffer_dir(),
+--     respect_gitignore = false,
+--     hidden = true,
+--     grouped = true,
+--     previewer = false,
+--     initial_mode = "insert",
+--     layout_config = { height = 40 }
+--   })
+-- end)
+--
 -- if (vim.cmd("args") == '')
 -- then
 --  print("aaaa")
