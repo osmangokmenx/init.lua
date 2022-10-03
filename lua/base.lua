@@ -49,4 +49,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 
-vim.cmd[[colorscheme onedark]]
+
+
+
+

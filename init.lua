@@ -3,6 +3,7 @@
 require("base")
 require("plugins")
 require("keymaps")
+require("plugins.alpha")
 
 
 -- Clipboard
@@ -19,3 +20,4 @@ end
 if is_win then
   require('windows')
 end  
+

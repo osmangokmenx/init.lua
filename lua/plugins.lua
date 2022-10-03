@@ -16,7 +16,7 @@ packer.startup(function(use)
 
   use {
     'neoclide/coc.nvim', 
-    run = 'yarn install --frozen-lockfile'
+    run = 'yarn install'
   } -- Syntax
   -- CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-prettier
   -- CocUninstall coc-git
@@ -26,6 +26,7 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+  use("ahmedkhalf/project.nvim")
  use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -49,4 +50,11 @@ packer.startup(function(use)
   })
   use "terrortylor/nvim-comment"
 
+  use {
+      'goolord/alpha-nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
+  }
 end)

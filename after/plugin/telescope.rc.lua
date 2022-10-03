@@ -42,6 +42,7 @@ telescope.setup {
 }
 
 telescope.load_extension("file_browser")
+telescope.load_extension("projects")
 
 vim.keymap.set('n', '<leader>f',
   function()
