@@ -10,6 +10,8 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   -- colorschemes
   use 'osmangokmenx/onedark.vim'
+  use 'osmangokmenx/github-nvim-theme'
+  
   -- LSP
   -- use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
