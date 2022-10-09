@@ -30,6 +30,7 @@ vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.wrap = false -- No Wrap lines
+vim.opt.mouse= "a" -- mouse
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
@@ -48,7 +49,6 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   command = "set nopaste"
 })
 
-vim.cmd[[set mouse = a]]
 
 
 
