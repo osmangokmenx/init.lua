@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   command = "set nopaste"
 })
 
-
+vim.cmd[[set mouse = a]]
 
 
 

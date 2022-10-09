@@ -29,7 +29,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use("ahmedkhalf/project.nvim")
- use {
+   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
