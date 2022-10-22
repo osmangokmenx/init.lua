@@ -11,6 +11,8 @@ packer.startup(function(use)
   -- colorschemes
   use 'osmangokmenx/onedark.vim'
   use 'osmangokmenx/github-nvim-theme'
+  -- Wakatime
+  use 'wakatime/vim-wakatime'
   
   -- LSP
   -- use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
@@ -59,4 +61,8 @@ packer.startup(function(use)
           require'alpha'.setup(require'alpha.themes.startify'.config)
       end
   }
+  use 'karb94/neoscroll.nvim'
+
 end)
+
+

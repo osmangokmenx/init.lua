@@ -29,14 +29,15 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.wrap = false -- No Wrap lines
-vim.opt.mouse= "a" -- mouse
+vim.opt.wrap = true -- No Wrap lines
+-- vim.opt.mouse= "a" -- mouse
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 vim.cmd[[set fillchars+=vert:\|]]
 
 vim.cmd("set signcolumn=yes");
+vim.cmd("set wrap linebreak");
 vim.cmd("let g:autoclose_on = 0");
 
 -- Undercurl
