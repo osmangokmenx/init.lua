@@ -11,9 +11,17 @@
 - Integrated with git
 - Simple shortcuts
 
-### Setup
 
-soon...
+### Prerequests 
+- node
+- neovim
+- ripgrep `brew install ripgrep`
+
+### Setup
+- git clone git@github.com:osmangokmenx/init.lua.git ~/.config/nvim
+- download [packer][https://github.com/wbthomason/packer.nvim]
+- `cd ~/.local/share/nvim/site/pack/packer/start/coc.nvim/` then `yarn install`
+
 
 ### Plugins
 
