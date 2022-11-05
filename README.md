@@ -19,7 +19,7 @@
 
 ### Setup
 - git clone git@github.com:osmangokmenx/init.lua.git ~/.config/nvim
-- download [packer][https://github.com/wbthomason/packer.nvim]
+- download [packer](https://github.com/wbthomason/packer.nvim)
 - `cd ~/.local/share/nvim/site/pack/packer/start/coc.nvim/` then `yarn install`
 
 
