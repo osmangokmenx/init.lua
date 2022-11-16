@@ -5,6 +5,7 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
+vim.wo.relativenumber = true
 vim.opt.background = 'dark' -- required
 vim.opt.termguicolors = true -- required 
 
@@ -43,6 +44,10 @@ vim.cmd("let g:autoclose_on = 0");
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
+
+-- remove 
+vim.api.nvim_command([[set fillchars=eob:\ ]])
+
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {

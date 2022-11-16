@@ -13,23 +13,33 @@ packer.startup(function(use)
   use 'osmangokmenx/github-nvim-theme'
   -- Wakatime
   use 'wakatime/vim-wakatime'
-  
   -- LSP
   -- use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'neovim/nvim-lspconfig' -- LSP
+  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 
+  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use 'L3MON4D3/LuaSnip'
 
   use {
-    'neoclide/coc.nvim', 
-    run = 'yarn install'
+  'neoclide/coc.nvim', 
+   run = 'yarn install'
   } -- Syntax
   -- CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-prettier
   -- CocUninstall coc-git
-  --
+  
 
   -- Telescope
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+
   use("ahmedkhalf/project.nvim")
    use {
     'nvim-treesitter/nvim-treesitter',
@@ -43,11 +53,7 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use 'nvim-lualine/lualine.nvim' -- Statusline
-  use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'sheerun/vim-polyglot'
-  -- use 'MunifTanjim/prettier.nvim' 
-  -- use 'glepnir/lspsaga.nvim' -- LSP UIs
-  
   use ({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,

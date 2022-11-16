@@ -45,7 +45,7 @@ soon...
 | `ctrl + a`     | Increment                   |
 | `ctrl + x `    | Decrementkey                |
 | `t + e`        | Tab Edit                    |
-| `<leader> + ö` | Toggle NvimTree             |
+| `<leader> + o` | Toggle NvimTree             |
 | `esc + esc`    | Disable search highlighting |
 
 ### Telescope
@@ -56,7 +56,7 @@ soon...
 | `s + f`         | File explorer                    |
 | `leader + rg `  | Find in all files in project dir |
 | `t + e`         | Tab Edit                         |
-| `<leader> + ö`  | Toggle NvimTree                  |
+| `<leader> + o`  | Toggle NvimTree                  |
 | `esc + esc`     | Disable search highlighting      |
 | `;;`            | Resume searching                 |
 | `;t`            | Help tags                        |

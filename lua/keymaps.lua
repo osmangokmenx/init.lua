@@ -1,6 +1,6 @@
 local keymap = vim.keymap
 
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 -- vim.g.mapleader = '\\'
 keymap.set('n', 'x', '"_x')
 
@@ -33,7 +33,7 @@ keymap.set('n', '<C-w><down>', '<C-w>3-')
 
 
 -- Tree
-keymap.set('n', '<leader>ö', ':NvimTreeToggle<Return><C-v>w:NvimTreeFocus<Return><C-w>w')
+keymap.set('n', '<leader>o', ':NvimTreeToggle<Return><C-v>w:NvimTreeFocus<Return><C-w>w')
 
 
 -- Other
