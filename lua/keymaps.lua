@@ -1,6 +1,6 @@
 local keymap = vim.keymap
 
-vim.g.mapleader = "'"
+vim.g.mapleader = " "
 -- vim.g.mapleader = '\\'
 keymap.set('n', 'x', '"_x')
 
@@ -37,7 +37,14 @@ keymap.set('n', '<leader>o', ':NvimTreeToggle<Return><C-v>w:NvimTreeFocus<Return
 
 
 -- Other
-vim.cmd('noremap <silent><esc> <esc>:noh<CR><esc>')
+keymap.set('n', '<silent><esc> <esc>', ':noh<CR><esc>')
 
-vim.cmd([[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]])
-vim.cmd([[command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')]])
+keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+keymap.set("x", "<leader>p", [["_dP]])
+
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+
+-- vim.cmd([[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]])
+-- vim.cmd([[command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')]])
