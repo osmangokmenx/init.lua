@@ -16,7 +16,7 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
-    file_ignore_patterns = { "node_modules", ".git"}
+    file_ignore_patterns = { "node_modules", ".git", ".DS_Store", 'vendor'}
   },
   extensions = {
     find_files = {
@@ -54,7 +54,7 @@ vim.keymap.set('n', '<leader>f',
   end)
 vim.keymap.set('n', '<leader>rg', function()
   builtin.live_grep({
-    file_ignore_patterns = { "node_modules", ".lock" }
+    file_ignore_patterns = { "node_modules", ".lock", 'vendor' }
   })
 end)
 vim.keymap.set('n', ';t', function()
