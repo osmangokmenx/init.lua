@@ -13,6 +13,7 @@ packer.startup(function(use)
   -- use 'osmangokmenx/onedark.vim'
   -- use 'osmangokmenx/github-nvim-theme'
   use 'lunarvim/lunar.nvim'
+  use "EdenEast/nightfox.nvim" -- Packer
   -- Wakatime
   use 'wakatime/vim-wakatime'
 
@@ -56,6 +57,8 @@ packer.startup(function(use)
       require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
   }
+  use "MunifTanjim/prettier.nvim"
+  use "jose-elias-alvarez/null-ls.nvim"
   -- lsp
   use {
     'VonHeikemen/lsp-zero.nvim',

@@ -5,7 +5,7 @@ toggleterm.setup{
   active = true,
   on_config_done = nil,
     size = 20,
-    open_mapping = [[<leader>/]],
+    open_mapping = [[<c-\>]],
     hide_numbers = true,
     shade_filetypes = {},
     shade_terminals = true,

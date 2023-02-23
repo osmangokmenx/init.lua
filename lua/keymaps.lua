@@ -45,6 +45,5 @@ keymap.set("x", "<leader>p", [["_dP]])
 
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
+vim.cmd('noremap <silent><esc> <esc>:noh<CR><esc>')
 
--- vim.cmd([[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]])
--- vim.cmd([[command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')]])

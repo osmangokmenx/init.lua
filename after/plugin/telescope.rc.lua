@@ -76,6 +76,9 @@ vim.keymap.set("n", "sf", function()
   })
 end)
 
+vim.keymap.set("n", "<leader>d", function()
+  builtin.diagnostics({})
+end)
 -- vim.keymap.set("n", "sf", function()
 --   telescope.extensions.file_browser.file_browser({
 --     path = "%:p:h",

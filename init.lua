@@ -1,4 +1,4 @@
--- TODO:
+-- TODOr:
 -- - lsp implement 
 require("base")
 require("plugins")

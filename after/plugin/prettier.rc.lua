@@ -1,8 +1,8 @@
 local status, prettier = pcall(require, "prettier")
 if (not status) then return end
-
+-- local prettier = require("prettier")
 prettier.setup {
-  bin = 'prettierd',
+  bin = 'prettier',
   filetypes = {
     "html",
     "css",
@@ -13,5 +13,5 @@ prettier.setup {
     "json",
     "scss",
     "less"
-  }
+  },
 }
