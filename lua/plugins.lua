@@ -16,10 +16,13 @@ packer.startup(function(use)
   use "EdenEast/nightfox.nvim" -- Packer
   -- Wakatime
   use 'wakatime/vim-wakatime'
+  -- use 'sbdchd/neoformat'
+  use { 'mhartington/formatter.nvim' }
 
   -- use {
-    -- 'neoclide/coc.nvim',
-    --  run = 'yarn install'
+  --   'neoclide/coc.nvim',
+  --    run = 'yarn install'
+  --
   -- } -- Syntax
   -- CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-prettier
   -- CocUninstall coc-git

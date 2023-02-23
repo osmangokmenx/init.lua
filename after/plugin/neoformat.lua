@@ -1,0 +1,18 @@
+-- vim.cmd[[set verbose=1]]
+--
+-- vim.cmd[[
+-- let g:neoformat_javascript_prettier = {
+--     \ 'exe': 'prettier',
+--         \ 'args': ['--stdin-filepath', '"%:p"'],
+--         \ 'stdin': 1,
+--         \ 'try_node_exe': 1,
+--         \ }
+-- let g:neoformat_enabled_javascript = ['prettier']
+-- ]]
+--
+-- vim.cmd[[
+--   augroup fmt
+--     autocmd!
+--     autocmd BufWritePost * Neoformat 
+--   augroup END
+-- ]]
