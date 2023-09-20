@@ -1,4 +1,5 @@
 {
+  "suggest.autoTrigger": "none",
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
@@ -6,6 +7,19 @@
     "typescriptreact",
     "json",
     "graphql",
-    "handlebars"
-  ]
+    "handlebars",
+    "lua",
+    "css",
+    "scss"
+  ],
+  
+  "languageserver": {
+      "angular": {
+          "command": "ngserver",
+          "args": ["--stdio", "--tsProbeLocations", "/opt/homebrew/lib/node_modules/typescript/lib", "--ngProbeLocations", "/opt/homebrew//lib/node_modules/@angular/language-server/lib"],
+          "filetypes": [ "ts", "typescript", "html", "typescriptreact", "typescript.tsx" ],
+          "trace.server.verbosity": "verbose"
+      }
+  }
 }
+
