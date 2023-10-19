@@ -134,6 +134,8 @@ keymap.set(
   'N',
   'Nzzzv'
 )
+
+vim.api.nvim_set_keymap('n', '<leader>gb', ':G blame<CR>', { noremap = true, silent = true })
 vim.cmd(
   'noremap <silent><esc> <esc>:noh<CR><esc>'
 )
