@@ -1,11 +1,29 @@
-local status, git = pcall(require, "git")
-if (not status) then return end
-
-git.setup({
-  keymaps = {
-    -- Open blame window
-    blame = "<Leader>gb",
-    -- Open file/folder in git repository
-    browse = "<Leader>go",
-  }
-})
+-- local status, git = pcall(require, "git")
+-- if (not status) then return end
+--
+-- return {
+--     "dinhhuy258/git.nvim",
+--     config = function()
+--         require("git").setup({
+--             default_mappings = false,
+--         })
+--     end,
+--     keys = {
+--         {
+--             "<leader>gb",
+--             function()
+--                 require("barbecue.ui").toggle(false)
+--                 vim.cmd("GitBlame")
+--             end,
+--             desc = "Git blame",
+--         },
+--     },
+-- }
+-- git.setup({
+--   keymaps = {
+--     -- Open blame window
+--     blame = "<Leader>gb",
+--     -- Open file/folder in git repository
+--     browse = "<Leader>go",
+--   }
+-- })

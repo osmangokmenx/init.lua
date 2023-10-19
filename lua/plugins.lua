@@ -66,14 +66,15 @@ packer.startup(
     use(
       'kyazdani42/nvim-tree.lua'
     )
-    -- GIT
+    -- GtT
     use(
       'lewis6991/gitsigns.nvim'
     )
+    use 'tpope/vim-fugitive'
     -- For git blame & browse
-    use(
-      'dinhhuy258/git.nvim'
-    ) 
+    -- use(
+    --   'dinhhuy258/git.nvim'
+    -- ) 
     -- Statusline
     use(
       'nvim-lualine/lualine.nvim'
