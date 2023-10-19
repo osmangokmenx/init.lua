@@ -7,6 +7,22 @@ local function telescope_buffer_dir()
   return vim.fn.expand('%:p:h')
 end
 
+local previewers = require('telescope.previewers')
+
+local new_maker = function(filepath, bufnr, opts)
+  opts = opts or {}
+
+  filepath = vim.fn.expand(filepath)
+  vim.loop.fs_stat(filepath, function(_, stat)
+    if not stat then return end
+    if stat.size > 100000 then
+      return 
+    else
+      previewers.buffer_previewer_maker(filepath, bufnr, opts)
+    end
+  end)
+end
+
 local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
@@ -16,6 +32,7 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
+    buffer_previewer_maker = new_maker,
     file_ignore_patterns = { "node_modules", "dist", ".angular", ".git", ".DS_Store", 'vendor'}
   },
   extensions = {
@@ -54,7 +71,7 @@ vim.keymap.set('n', '<leader>f',
   end)
 vim.keymap.set('n', '<leader>rg', function()
   builtin.live_grep({
-    file_ignore_patterns = { "node_modules", ".lock", 'vendor' }
+    file_ignore_patterns = { "node_modules", ".lock", 'vendor', ".png", ".webp", ".jpg", ".jpeg" }
   })
 end)
 vim.keymap.set('n', ';t', function()
@@ -79,6 +96,7 @@ end)
 vim.keymap.set("n", "<leader>d", function()
   builtin.diagnostics({})
 end)
+
 -- vim.keymap.set("n", "sf", function()
 --   telescope.extensions.file_browser.file_browser({
 --     path = "%:p:h",

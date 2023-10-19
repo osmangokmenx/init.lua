@@ -32,7 +32,7 @@ packer.startup(
 
     use('psliwka/vim-smoothie')
 
-    use {'neoclide/coc.nvim', branch = 'release'}
+    -- use {'neoclide/coc.nvim', branch = 'release'}
     -- CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-prettier
     -- CocUninstall coc-git
 
@@ -107,10 +107,11 @@ packer.startup(
         )
       end,
     })
+
     -- LSP
-    use(
-      'jose-elias-alvarez/null-ls.nvim'
-    )
+    -- use(
+    --   'jose-elias-alvarez/null-ls.nvim'
+    -- )
     -- lsp
     use({
       'VonHeikemen/lsp-zero.nvim',
