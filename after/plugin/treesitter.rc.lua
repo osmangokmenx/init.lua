@@ -2,7 +2,7 @@ local status, ts = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
 ts.setup {
-  -- ensure_installed = {"help", "javascript", "typescript", "c", "lua", "vim", "help" },
+  ensure_installed = {'bash'},
   sync_install = false,
   auto_install = true,
   autotag = {
