@@ -16,7 +16,7 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
-    file_ignore_patterns = { "node_modules", ".git", ".DS_Store", 'vendor'}
+    file_ignore_patterns = { "node_modules", "dist", ".angular", ".git", ".DS_Store", 'vendor'}
   },
   extensions = {
     find_files = {
