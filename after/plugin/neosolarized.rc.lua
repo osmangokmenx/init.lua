@@ -38,4 +38,4 @@ Group.new("HoverBorder", colors.yellow, colors.none, styles.NONE)
 
 
 
-vim.cmd([[colorscheme neosolarized]])
+-- vim.cmd([[colorscheme neosolarized]])
