@@ -12,9 +12,15 @@ return {
         desc = "Live grep"
     }, {
         "sf",
-        "<cmd>Telescope file_browser<cr>",
+        ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+        -- "<cmd>Telescope file_browser<cr>",
         desc = "File browser"
-    }},
+    }, {
+      ";;",
+      ':Telescope resume<CR>',
+      desc = "Resume"
+    }
+  },
     config = function()
         local status, telescope = pcall(require, "telescope")
         if (not status) then
