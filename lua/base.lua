@@ -32,7 +32,7 @@ opt.breakindent = true
 opt.shiftwidth = 2
 opt.tabstop = 2
 opt.wrap = true -- No Wrap lines
--- opt.mouse= "a" -- mouse
+opt.mouse= "" -- mouse
 opt.backspace = { 'start', 'eol', 'indent' }
 opt.path:append { '**' } -- Finding files - Search down into subfolders
 opt.wildignore:append { '*/node_modules/*' }
@@ -55,4 +55,11 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',
   command = "set nopaste"
 })
+
+vim.api.nvim_exec([[
+  augroup BladeFiletype
+    autocmd!
+    autocmd BufNewFile,BufRead *.blade.php set filetype=html
+  augroup END
+]], false)
 

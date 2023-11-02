@@ -12,7 +12,7 @@ return {
         desc = "Live grep"
     }, {
         "sf",
-        ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+        ":Telescope file_browser path=%:p:h select_buffer=true initial_mode=normal<CR>",
         -- "<cmd>Telescope file_browser<cr>",
         desc = "File browser"
     }, {
