@@ -27,7 +27,7 @@ return {
     })
 
     -- Fix Undefined global 'vim'
-    lsp.configure('lua-language-server', {
+    lsp.configure('lua_ls', {
       settings = {
         Lua = {
           diagnostics = {
@@ -35,6 +35,16 @@ return {
           }
         }
       }
+    })
+    lsp.configure('angularls', {
+      arguments = {
+        "--stdio",
+        "--tsProbeLocations",
+        "/usr/local/lib/node_modules/typescript/lib",
+        "--ngProbeLocations",
+        "/usr/local/lib/node_modules/@angular/language-server/bin"
+      },
+      filetypes = { "ts", "typescript", "html" }
     })
 
 

@@ -46,7 +46,7 @@ return {
     dashboard.button("q", " " .. " Quit", ":qa<CR>")}
 
     local function footer()
-      return "Do Better"
+      return "vim"
     end
 
     dashboard.section.footer.val = footer()
